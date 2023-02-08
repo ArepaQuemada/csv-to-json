@@ -1,7 +1,7 @@
-export const arrayToObject = (array: any) =>
+export const arrayToObject = (array: string[][]) =>
   array
-    .map((currentRow: any, _: any, originalArray: any) => {
-      return currentRow.reduce((acum: any, currentValue: any, index: any) => {
+    .map((currentRow, _, originalArray) => {
+      return currentRow.reduce((acum, currentValue, index) => {
         return {
           ...acum,
           [originalArray[0][index].trim()]: currentValue,

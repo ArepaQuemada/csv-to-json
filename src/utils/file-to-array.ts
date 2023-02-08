@@ -1,7 +1,8 @@
-export const convertFileToArray = (file: any) =>
+export const convertFileToArray = (file: string) =>
   file
     .trim()
     .split(/\n/g)
-    .reduce((acum: any, currentValue: any) => {
-      return [...acum, currentValue.split(";")];
-    }, []);
+    .reduce<string[][]>(
+      (acum, currentValue) => [...acum, currentValue.split(";")],
+      []
+    );

@@ -1,7 +1,7 @@
 export const pipe =
-  (...functions: any) =>
-  (args: any) =>
-    functions.reduce(
-      (result: any, currentFunction: any) => currentFunction(result),
+  <T extends Function[]>(...functions: T) =>
+  <K>(args: K) =>
+    functions.reduce<K>(
+      (result, currentFunction) => currentFunction(result),
       args
     );
