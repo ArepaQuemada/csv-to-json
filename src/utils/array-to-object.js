@@ -1,12 +1,13 @@
 const arrayToObject = (array) =>
-  array.slice(1).map((currentRow) => {
-    return currentRow.reduce(
-      (acum, currentValue, index, currentArray) => ({
-        ...acum,
-        [currentArray[0][index]]: currentValue,
-      }),
-      {}
-    );
-  });
+  array
+    .map((currentRow, _, originalArray) => {
+      return currentRow.reduce((acum, currentValue, index) => {
+        return {
+          ...acum,
+          [originalArray[0][index].trim()]: currentValue,
+        };
+      }, {});
+    })
+    .splice(1);
 
 module.exports = arrayToObject;
