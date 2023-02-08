@@ -1,11 +1,9 @@
-const fs = require("fs");
-const convertFileToArray = require("./utils/file-to-array");
-const pipe = require("./utils/pipe");
-const arrayToObject = require("./utils/array-to-object");
-const makeJson = require("./utils/make-json");
+import fs from "fs";
+import { pipe, arrayToObject, convertFileToArray, makeJson } from "./utils";
 
 /**
  * TODO
+ * MIGRAR A TYPESCRIPT
  * Implementar un backend que reciba el csv y devuelva el formato JSON
  */
 
