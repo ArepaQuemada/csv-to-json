@@ -1,5 +1,9 @@
 # CSV TO JSON
 
-Generates a json file from a csv file
+Genera un archivo JSON a partir de un CSV como un array de objetos
 
-Work in progress
+## TODO
+
+- Agregar tests
+- Posibilidad de convertirlo en hash
+- Crear backend servicio
