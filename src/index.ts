@@ -3,8 +3,9 @@ import { pipe, arrayToObject, convertFileToArray, makeJson } from "./utils";
 
 /**
  * TODO
- * TESTEAR POSIBLES BUGS CON DIFERENTES ARCHIVOS (DISTINTOS TAMAÑOS DE FILA Y LONGITUD) EJEMPLO OTRO NAME EN CSV
  * Implementar un backend que reciba el csv y devuelva el formato JSON
+ * Formatearlo añadir opción como hash
+ * agregar tests
  */
 
 const readCSV = (path = "./username.csv") => {

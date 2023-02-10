@@ -2,9 +2,11 @@ export const arrayToObject = (array: string[][]) =>
   array
     .map((currentRow, _, originalArray) => {
       return currentRow.reduce((acum, currentValue, index) => {
+        const mainRow = originalArray[0];
+        if (index >= mainRow.length) return acum;
         return {
           ...acum,
-          [originalArray[0][index].trim()]: currentValue,
+          [mainRow[index].trim()]: currentValue,
         };
       }, {});
     })
